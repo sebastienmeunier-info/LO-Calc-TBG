@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:items xmlns:oor="http://openoffice.org/2001/registry"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <item oor:path="/org.openoffice.Office.Addons/Addons">
+    <node oor:name="com.example.lo-dashboard-ext" oor:op="replace">
+
+      <prop oor:name="Title" oor:op="fuse">
+        <value xml:lang="fr">Ta~bleau de bord</value>
+        <value xml:lang="en">~Dashboard</value>
+      </prop>
+      <prop oor:name="ImageIdentifier" oor:op="fuse">
+        <value>private:graphic/res/sx10603.png</value>
+      </prop>
+
+      <node oor:name="OfficeMenuBar">
+        <node oor:name="com.example.lo-dashboard-ext.menu" oor:op="replace">
+          <prop oor:name="Title" oor:op="fuse">
+            <value xml:lang="fr">Ta~bleau de bord</value>
+            <value xml:lang="en">~Dashboard</value>
+          </prop>
+
+          <node oor:name="m0" oor:op="replace">
+            <prop oor:name="URL" oor:op="fuse">
+              <value>com.example.lo-dashboard-ext:create</value>
+            </prop>
+            <prop oor:name="Title" oor:op="fuse">
+              <value xml:lang="fr">Créer un tableau de bord...</value>
+              <value xml:lang="en">Create dashboard...</value>
+            </prop>
+            <prop oor:name="Target" oor:op="fuse">
+              <value>_self</value>
+            </prop>
+          </node>
+
+          <node oor:name="m1" oor:op="replace">
+            <prop oor:name="URL" oor:op="fuse">
+              <value>com.example.lo-dashboard-ext:slicer</value>
+            </prop>
+            <prop oor:name="Title" oor:op="fuse">
+              <value xml:lang="fr">Segment (filtre)...</value>
+              <value xml:lang="en">Slicer (filter)...</value>
+            </prop>
+            <prop oor:name="Target" oor:op="fuse">
+              <value>_self</value>
+            </prop>
+          </node>
+
+          <node oor:name="m2" oor:op="replace">
+            <prop oor:name="URL" oor:op="fuse">
+              <value>com.example.lo-dashboard-ext:refresh</value>
+            </prop>
+            <prop oor:name="Title" oor:op="fuse">
+              <value xml:lang="fr">Actualiser les tables</value>
+              <value xml:lang="en">Refresh tables</value>
+            </prop>
+            <prop oor:name="Target" oor:op="fuse">
+              <value>_self</value>
+            </prop>
+          </node>
+
+        </node>
+      </node>
+    </node>
+  </item>
+
+  <item oor:path="/org.openoffice.Office.ProtocolHandler/Handlers">
+    <node oor:name="com.example.lo-dashboard-ext.Handler" oor:op="replace">
+      <prop oor:name="Protocols" oor:type="oor:string-list">
+        <value>com.example.lo-dashboard-ext:*</value>
+      </prop>
+      <prop oor:name="UNOComponent">
+        <value>com.example.lo-dashboard-ext.Handler</value>
+      </prop>
+    </node>
+  </item>
+
+</oor:items>

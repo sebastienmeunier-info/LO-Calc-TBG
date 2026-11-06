@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006"
+    xmlns:d="http://openoffice.org/extensions/description/2006"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <version value="0.1.0"/>
+  <identifier value="com.example.lo-dashboard-ext"/>
+  <display-name>
+    <name lang="fr">Tableaux de bord Calc (PoC)</name>
+    <name lang="en">Calc dashboards (PoC)</name>
+  </display-name>
+  <dependencies>
+    <d:OpenOffice.org-minimal-version d:name="LibreOffice" d:value="7.4"/>
+  </dependencies>
+</description>
